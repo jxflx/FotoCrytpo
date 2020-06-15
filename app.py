@@ -52,7 +52,9 @@ def login():
 def signup():
     return signupView()
 
-
+@app.route('/logout')
+def logout():
+    return logoutView()
 
 if __name__ == '__main__':
     db.create_all()
