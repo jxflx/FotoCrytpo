@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Encrptar | FotoCrypto{% endblock %}
+{% block content %}
+<div class="site-navigation">
+    <div class="logo">
+        <a href="/">
+            <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="FotoCrypto Logo">
+        </a>
+    </div>
+    <nav class="links">
+        <a href="/logout" class="important-link">Salir</a>
+    </nav>
+    <div class="burger">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+    </div>
+</div>
+<main class="encrypt">
+    <form action="{{ url_for('encrypt') }}" method="POST" class="encrypt-sty" enctype="multipart/form-data">
+        <h1>Encriptar Imagen</h1>
+        <input type="file" id="file" name="image"/>
+        <label for="file">Elige tu imagen</label>
+        <input type="password" name="password" id="pss" placeholder="Contraseña para la imagen">
+        <textarea name="message" id="" cols="30" rows="10" placeholder="Tu información secreta va aquí..."></textarea>
+        <button type="submit" class="btn btn-a">Encriptar</button>
+    </form>
+</main>
+{% endblock %}

@@ -54,7 +54,7 @@ def logout():
     return logoutView()
 
 @app.route('/encrypt', methods=['GET', 'POST'])
-def encryptFile():
+def encrypt():
     return encryptView()
 
 if __name__ == '__main__':

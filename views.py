@@ -15,18 +15,16 @@ def indexView():
 
 def encryptView():
     if request.method == 'POST':
-        f = request.files['myfile']
+        f = request.files['image']
         filename = f.filename
+        extentionFile = filename.split('.')
+        print(f'La extensión de este archivo es: {extentionFile[1]}')
         f.save(f'./upload/{filename}')
 
-        return 'Salvado!'
+        flash('Se guardo correctamente', 'success')
+        return redirect(url_for('index'))
 
-    return """
-<form method="POST" enctype="multipart/form-data">
-<input type="file" name="myfile">
-<input type="submit" value="Upload">
-</form> 
-"""
+    return render_template('encrypt.html')
 
 def loginView():
     if request.method == "POST":

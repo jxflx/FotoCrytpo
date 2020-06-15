@@ -4,11 +4,7 @@
 body {
     font-family: 'Karla', sans-serif;
 }
-
-.lh-1 {
-    line-height: 1.1;
-}
-
+// Flash Messages 
 .scs-check {
     margin-right: 1rem;
 }
@@ -23,7 +19,7 @@ body {
     background-color: #6be619;
     color: #fff;
     list-style: none;
-    border-radius: 2.2rem;
+    border-radius: 2rem;
 }
 
 .danger {
@@ -36,9 +32,8 @@ body {
     background-color: #ff3613;
     color: #fff;
     list-style: none;
-    border-radius: 2.2rem;
+    border-radius: 2rem;
 }
-
 
 .a-linter {
     color: $azul-fuerte;
@@ -49,12 +44,12 @@ body {
     width: 12px;
     background-color: #F5F5F5;
 }
- 
+
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: #081d21;
 }
- 
+
 ::-webkit-scrollbar-track {
     border-radius: 10px;
     background-color: #F5F5F5;
@@ -91,7 +86,7 @@ body {
 .site-navigation {
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -110,6 +105,7 @@ body {
         height: 6rem;
         padding: 0.5rem;
     }
+
     padding: 1rem 2rem;
 }
 
@@ -192,28 +188,33 @@ body {
     justify-content: space-between;
     width: 90%;
     margin: auto auto;
+
     @media (max-width: 920px) {
         align-items: stretch;
         justify-content: space-around;
         width: 95%;
         flex-direction: column;
-        
+
     }
 }
 
 .text-hero {
     width: 60%;
+
     h1 {
         @media (max-width: 920px) {
             font-size: 5rem;
         }
+
         line-height: 1.1;
         font-size: 7rem;
+
         span {
             color: $rojo;
         }
     }
 }
+
 // We
 .we {
     background-color: $rojo;
@@ -236,62 +237,77 @@ body {
     width: 90%;
     margin: auto;
 }
+
 .wh-title {
     font-size: 6rem;
     line-height: 1.1;
     text-align: center;
     margin-bottom: 3rem;
-    @media (max-width: 827px){
+
+    @media (max-width: 827px) {
         font-size: 4.5rem;
     }
 }
+
 .why-options {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 3rem;
+
     @media (max-width: 629px) {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
 .wh-el {
     // @include center(true);
     text-align: center;
+
     i {
         font-size: 5rem;
         color: darken($color: $amarillo, $amount: 20%);
     }
+
     h4 {
         font-size: 2.3rem;
     }
+
     p {
         line-height: 1.5;
     }
 }
+
 .beneficts {
     margin: 0;
     text-align: center;
     background-color: $azul;
+
     svg {
         display: block;
     }
 }
+
 .beneficts.upper {
     background-color: #fff;
 }
+
 .bn-title {
     margin-top: 0;
     font-size: 6rem;
     line-height: 1.2;
+
     @media (max-width: 525px) {
         padding-top: 3rem;
     }
 }
+
 .beneficts-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 3rem;
     padding-bottom: 4rem;
 }
+
 .bn-el {
     display: flex;
     align-items: center;
@@ -303,6 +319,7 @@ body {
     width: 100%;
     text-align: center;
     border-radius: 2.2rem;
+
     i {
         color: $verde;
         margin-right: 0.5rem;
@@ -319,10 +336,12 @@ body {
     padding: 1.2rem 0;
     color: white;
     text-align: center;
+
     a {
         color: #fff;
     }
 }
+
 // Login
 
 .back {
@@ -332,11 +351,13 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
+
     p {
         margin: 0 0 0 0.5rem;
         font-weight: 700;
         color: $verde;
     }
+
     i {
         font-size: 2.5rem;
         color: $verde;
@@ -345,7 +366,7 @@ body {
 
 .login-body {
     height: 100vh;
-    background-image: url('/static/img/bg-login.png');
+    background-image: url('/frontend/img/bg-login.png');
     background-size: cover;
     background-position: center center;
     @include center(true);
@@ -365,6 +386,7 @@ body {
     border-radius: 2rem;
     background-color: #fff;
     @include center(true);
+
     input {
         width: 100%;
         padding: 1rem 1.3rem;
@@ -372,6 +394,7 @@ body {
         border: 2px solid $azul;
         margin: 1rem auto;
     }
+
     button {
         cursor: pointer;
         margin-top: 1.2rem;
@@ -383,6 +406,7 @@ body {
 .signup-sty {
     @extend .login-sty;
     border: 1px solid $rojo;
+
     input {
         border: 2px solid $rojo;
     }
@@ -393,6 +417,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .options-nav nav {
     transform: translateY(15vh);
     margin-right: 3rem;
@@ -405,6 +430,7 @@ body {
         &:first-child {
             border: 2px solid $rojo;
         }
+
         border: 2px solid saturate($color: $azul, $amount: 10%);
     }
 }
@@ -417,10 +443,12 @@ body {
     border-radius: 3rem;
     padding: 1rem;
 }
+
 .user-details {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     i {
         font-size: 4rem;
         color: $azul-fuerte;
@@ -430,6 +458,7 @@ body {
 
 .buttons-side {
     width: 17rem;
+
     a {
         display: block;
         text-align: center;
@@ -437,8 +466,75 @@ body {
     }
 }
 
-#file {
-    button {
-        background-color: $azul;
+.encrypt {
+    height: 100vh;
+    @include center(true);
+    background: rgb(78, 205, 196);
+    background: linear-gradient(145deg, rgba(78, 205, 196, 1) 0%, rgba(57, 208, 133, 1) 100%);
+}
+
+.encrypt-sty {
+    padding: 2rem 3rem 1.5rem 3rem;
+    text-align: center;
+    position: absolute;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+    background-color: $rojo;
+    color: white;
+    @include center(true);
+
+    input {
+        width: 100%;
+        padding: 1rem 1.3rem;
+        border-radius: 2rem;
+        border: 2px solid $white;
+        margin: 1rem auto;
     }
+
+    button {
+        cursor: pointer;
+        margin-top: 1.2rem;
+        border: none;
+        width: 100%;
+    }
+
+    textarea {
+        margin: 0.4rem auto;
+        width: 100%;
+        border-radius: 2rem;
+        resize: none;
+        padding: 1rem;
+    }
+}
+
+[type="file"] {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    white-space: nowrap;
+    width: 1px;
+}
+
+[type="file"]+label {
+    background-color: $azul;
+    border-radius: 4rem;
+    color: #000000;
+    padding: 1rem;
+    width: 100%;
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 2rem 4rem;
+}
+
+[type="file"]:focus+label,
+[type="file"]+label:hover {
+    background-color: $azul-fuerte;
+    color: $white;
+}
+
+[type="file"]:focus+label {
+    outline: 1px dotted #000;
 }
