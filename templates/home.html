@@ -42,8 +42,14 @@
             <p>Desencriptar Imagen</p>
         </div>
         <div class="buttons-side">
-            <a href="/encrypt" class="btn btn-a">Desencriptar</a>
+            <a href="/decrypt" class="btn btn-a">Desencriptar</a>
         </div>
     </article>
 </main>
+{% endblock %}
+{% block js %}
+<script>
+    const active = "{{outfile}}";
+    console.log(active)
+</script>
 {% endblock %}

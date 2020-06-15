@@ -1,4 +1,4 @@
-from flask import Flask, request, session, render_template, flash, redirect, url_for
+from flask import Flask, request, session, render_template, flash, redirect, url_for, send_file
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
 from cryptosteganography import CryptoSteganography
@@ -8,6 +8,8 @@ from app import *
 
 import os
 
+allowedFiles = ['jpg', 'png', 'jpeg']
+
 def indexView():
     if "username" in session:
         return render_template('home.html', username=session['username'])
@@ -15,14 +17,29 @@ def indexView():
 
 def encryptView():
     if request.method == 'POST':
-        f = request.files['image']
+        f        = request.files['image']
         filename = f.filename
         extentionFile = filename.split('.')
-        print(f'La extensión de este archivo es: {extentionFile[1]}')
-        f.save(f'./upload/{filename}')
+        imgPath    = f'./upload/{filename}'
+        password   = request.form['password']
+        message    = request.form['message']
+        outputName = f"./upload/{extentionFile[0]}-encr.png"
+        simpleOutput = f'{extentionFile[0]}-encr.png'
+        if extentionFile[1] in allowedFiles:
+            f.save(imgPath)
+        else:
+            flash('Extensión de archivo no permitida', 'danger')
+            return redirect(url_for('index'))
+        
+        # Encrypting File
+        crypto_steganography = CryptoSteganography(password)
+        crypto_steganography.hide(imgPath, outputName, message)
 
-        flash('Se guardo correctamente', 'success')
-        return redirect(url_for('index'))
+        flash('Se guardó correctamente', 'success')
+
+        
+        
+        return render_template('home.html', outfile=simpleOutput)
 
     return render_template('encrypt.html')
 
