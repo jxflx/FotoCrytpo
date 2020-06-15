@@ -1,9 +1,5 @@
 from flask import Flask, request, session, render_template, flash, redirect, url_for
-# from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
-# from cryptosteganography import CryptoSteganography
-# from double_auth import send_verfication
-# from random import randint
 from views import *
 
 import os
