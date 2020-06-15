@@ -39,9 +39,6 @@ class User(db.Model):
 def index():
     return indexView()
 
-@app.route('/encrypt', methods=['GET', 'POST'])
-def encryptFile():
-    return encryptView()
 
 @app.route('/login', methods=["GET", "POST"])
 def login():
@@ -55,6 +52,10 @@ def signup():
 @app.route('/logout')
 def logout():
     return logoutView()
+
+@app.route('/encrypt', methods=['GET', 'POST'])
+def encryptFile():
+    return encryptView()
 
 if __name__ == '__main__':
     db.create_all()
