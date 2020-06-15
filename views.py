@@ -10,6 +10,13 @@ import os
 
 allowedFiles = ['jpg', 'png', 'jpeg']
 
+def deletePrevious():
+    import glob
+    files = glob.glob('./upload/*')
+    for fl in files:
+        os.remove(fl)
+
+
 def indexView():
     if "username" in session:
         return render_template('home.html', username=session['username'])
@@ -17,6 +24,8 @@ def indexView():
 
 def encryptView():
     if request.method == 'POST':
+        deletePrevious()
+        
         f        = request.files['image']
         filename = f.filename
         extentionFile = filename.split('.')
@@ -39,9 +48,13 @@ def encryptView():
 
         
         
-        return render_template('home.html', outfile=simpleOutput)
+        return render_template('encrypt.html', outfile=simpleOutput)
 
     return render_template('encrypt.html')
+
+def decryptView():
+    pass
+
 
 def loginView():
     if request.method == "POST":

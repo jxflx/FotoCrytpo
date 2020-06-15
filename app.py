@@ -1,4 +1,4 @@
-from flask import Flask, request, session, render_template, flash, redirect, url_for
+from flask import Flask, request, session, render_template, flash, redirect, url_for, send_file
 from flask_sqlalchemy import SQLAlchemy
 from views import *
 
@@ -56,6 +56,15 @@ def logout():
 @app.route('/encrypt', methods=['GET', 'POST'])
 def encrypt():
     return encryptView()
+
+@app.route('/decrypt', methods=['GET', 'POST'])
+def decrypt():
+    return decryptView()
+
+
+@app.route('/images/<string:path>')
+def images(path):
+    return send_file(f'./upload/{path}', as_attachment=True)
 
 if __name__ == '__main__':
     db.create_all()

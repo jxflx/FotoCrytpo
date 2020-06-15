@@ -27,3 +27,23 @@
     </form>
 </main>
 {% endblock %}
+{% block js %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script>
+    const active = "{{outfile}}";
+    console.log(active)
+    if (active) {
+        Swal.fire({
+            title: 'Tu Imagen encriptada está lista',
+            icon: 'success',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Descargar'
+          }).then((result) => {
+            if (result.value) {
+                window.location.href = `/images/${active}`;
+            }
+          })
+    }
+
+</script>
+{% endblock %}
