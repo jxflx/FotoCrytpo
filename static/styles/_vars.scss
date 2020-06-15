@@ -1,0 +1,22 @@
+//  palette
+$azul-fuerte: #1a535c;
+$azul: #4ecdc4;
+$white: #f7fff7;
+$rojo: #ff6b6b;
+$amarillo: #ffe66d;
+$verde: #39d085;
+
+@mixin center($column) {
+    display: flex;
+
+    @if $column {
+        flex-direction: column;
+    }
+
+    @else {
+        flex-direction: row;
+    }
+
+    align-items: center;
+    justify-content: center;
+}

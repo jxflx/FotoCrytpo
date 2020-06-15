@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Registrarse | FotoCrypto{% endblock %}
+{% block content %}
+<div class="site-navigation">
+    <div class="logo">
+        <a href="/">
+            <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="FotoCrypto Logo">
+        </a>
+    </div>
+    <nav class="links">
+        <a href="/">Inicio</a>
+        <a href="/#why">Porqué</a>
+        <a href="/#beneficts">Beneficios</a>
+        <a class="important-link" href="/login">Iniciar Sesión</a>
+    </nav>
+    <div class="burger">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+    </div>
+</div>
+<div class="h-100vh center-center">
+    <form action="{{ url_for('signup') }}" method="post" class="signup-sty">
+        <h1>Regístrate</h1>
+        <input type="number" value="0" style="display: none;" name="code">
+        <input type="text" required name="username" id="usr" placeholder="Usuario">
+        <input type="email" name="email" id="eml" placeholder="Email">
+        <input type="password" required name="password" id="pss" placeholder="Contraseña">
+        <button type="submit" class="btn btn-b">Registrarse</button>
+        <p>¿Ya tienes cuenta? <a href="/login" class="a-linter">Inicia Sesión</a></p>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Karla-Regular
+font link: https://fonts.google.com/specimen/Karla
+font author: Jonny Pinhorn
+font author site: https://twitter.com/jonpinhorn_type
+
+
+icon designer: Ilsur Aptukov
+icon designer link: /Ilsur
+        
+
+fontColor: {"gradient-0":"#1a535c","gradient-1":"#4ecdc4"}
+bgColor: {"hex":"transparent"}
+iconColor: {"gradient-0":"#1a535c","gradient-1":"#4ecdc4"}
+
+      

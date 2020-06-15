@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %}FotoCrypto{% endblock %}
+{% block content %}
+<div class="site-navigation">
+    <div class="logo">
+        <a href="/">
+            <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="FotoCrypto Logo">
+        </a>
+    </div>
+    <nav class="links">
+        <a href="/">Inicio</a>
+        <a href="#why">Porqué</a>
+        <a href="#beneficts">Beneficios</a>
+        <a class="important-link" href="/login">Iniciar Sesión</a>
+    </nav>
+    <div class="burger">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+    </div>
+</div>
+<header class="site-hero">
+    <div class="text-hero">
+        <h1 class="main-h1">Transporta tu información <span>secreta</span></h1>
+        <a href="/signup" class="btn btn-a">Regístrate</a>
+    </div>
+    <div class="figure-hero">
+        <img src="{{ url_for('static', filename='img/main.svg') }}">
+    </div>
+</header>
+<section class="we">
+    <div class="contenedor">
+        <h2 class="main-title">FotoCrypto</h2>
+        <p>Es una herramienta de <a class="a-linter" href="https://es.wikipedia.org/wiki/Esteganograf%C3%ADa"
+                target="_blank">esteganografía</a> la cual
+            tiene la capacidad de ocultar cadenas de texto y encriptarlas.</p>
+        <p>Fue realizado para que ya no tengas que preocuparte por si alguien encuantra el lugar en donde almacenas
+            tu
+            información importante, ahora, nadie sabrá que la escondes en una imagen.</p>
+    </div>
+</section>
+<main id="why" class="why">
+    <h2 class="wh-title">La manera más fácil de transportar información de forma segura</h2>
+    <div class="why-options">
+        <div class="wh-el">
+            <i class="fas fa-shield-alt"></i>
+            <h4>Proceso totalmente cifrado</h4>
+            <p>Utiliza un esquema de cifrado completamente seguro que garantizará que tus datos estén a salvo.</p>
+        </div>
+        <div class="wh-el">
+            <i class="fas fa-code-branch"></i>
+            <h4>Open Source</h4>
+            <p>Este proyecto se encuentra en GitHub, cualquiera puede ver el código fuente y aportar. Somos
+                transparentes.</p>
+        </div>
+        <div class="wh-el">
+            <i class="fas fa-user-secret"></i>
+            <h4>Completa discreción</h4>
+            <p>Nuestro método permite tener tu información más sensible en el lugar menos esperado, una imagen.</p>
+        </div>
+    </div>
+</main>
+<div class="beneficts upper">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
+        <path fill="#4ecdc4" fill-opacity="1"
+            d="M0,256L80,250.7C160,245,320,235,480,202.7C640,171,800,117,960,106.7C1120,96,1280,128,1360,144L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+        </path>
+    </svg>
+</div>
+<section id="beneficts" class="beneficts">
+    <div class="contenedor">
+        <h2 class="bn-title">Beneficios</h2>
+        <div class="beneficts-grid">
+            <div class="bn-el">
+                <i class="fas fa-check"></i>
+                <p> Datos protegidos por contraseña.</p>
+            </div>
+            <div class="bn-el">
+                <i class="fas fa-check"></i>
+                <p> Utiliza imágenes, seguro tienes una.</p>
+            </div>
+            <div class="bn-el">
+                <i class="fas fa-check"></i>
+                <p> Imposible de detectar para otros.</p>
+            </div>
+            <div class="bn-el">
+                <i class="fas fa-check"></i>
+                <p> Lleva tus imágenes a donde quieras.</p>
+            </div>
+            <div class="bn-el">
+                <i class="fas fa-check"></i>
+                <p> Las imágenes siguen funcionando</p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="w-footer">
+    <p>Sitio Web Desarrollado por <a href="https://jesus1554.github.io/">F&W Frontend Services</a></p>
+</footer>
+{% endblock %}

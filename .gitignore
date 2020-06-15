@@ -1,0 +1,10 @@
+*.png
+*.jpg
+*.jpeg
+*.db
+*.svg
+*.ico
+__pycache__/
+.vscode/
+flask_env/
+upload/

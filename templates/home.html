@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Home | FotoCrypto{% endblock %}
+{% block content %}
+<div class="site-navigation">
+    <div class="logo">
+        <a href="/">
+            <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="FotoCrypto Logo">
+        </a>
+    </div>
+    <nav class="links">
+        <a href="/logout" class="important-link">Salir</a>
+    </nav>
+    <div class="burger">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+    </div>
+</div>
+<main class="home-father contenedor">
+    <h1 class="main-title lh-1">Home</h1>
+    <article class="home-action">
+        <div class="user-details">
+            <i class="far fa-user"></i>
+            <p>{{username}}</p>
+        </div>
+        <div class="buttons-side">
+            <a class="btn btn-danger" href="/delete-me">Borrar Datos</a>
+        </div>
+    </article>
+    <article class="home-action">
+        <div class="user-details">
+            <i class="fas fa-lock"></i>
+            <p>Encriptar Imagen</p>
+        </div>
+        <div class="buttons-side">
+            <a href="/encrypt" class="btn btn-a">Encriptar</a>
+        </div>
+    </article>
+    <article class="home-action">
+        <div class="user-details">
+            <i class="fas fa-unlock"></i>
+            <p>Desencriptar Imagen</p>
+        </div>
+        <div class="buttons-side">
+            <a href="/encrypt" class="btn btn-a">Desencriptar</a>
+        </div>
+    </article>
+</main>
+{% endblock %}

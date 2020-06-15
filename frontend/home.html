@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jesus1554/Sass-basis@1.1/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Inicio | FotoCrypto</title>
+</head>
+
+<body>
+    <div class="site-navigation">
+        <div class="logo">
+            <a href="/">
+                <img src="img/logo.svg" alt="FotoCrypto Logo">
+            </a>
+        </div>
+        <nav class="links">
+            <a href="/logout" class="important-link">Salir</a>
+        </nav>
+        <div class="burger">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
+    </div>
+    <main class="home-father contenedor">
+        <article class="home-action">
+            <div class="user-details">
+                <i class="far fa-user"></i>
+                <p>Jesus1554</p>
+            </div>
+            <div class="buttons-side">
+                <a class="btn btn-danger" href="/delete-me">Borrar Datos</a>
+            </div>
+        </article>
+        <article class="home-action">
+            <div class="user-details">
+                <i class="fas fa-lock"></i>
+                <p>Encriptar Imagen</p>
+            </div>
+            <div class="buttons-side">
+                <a href="/encrypt" class="btn btn-a">Encriptar</a>
+            </div>
+        </article>
+        <article class="home-action">
+            <div class="user-details">
+                <i class="fas fa-unlock"></i>
+                <p>Desencriptar Imagen</p>
+            </div>
+            <div class="buttons-side">
+                <a href="/encrypt" class="btn btn-a">Desencriptar</a>
+            </div>
+        </article>
+    </main>
+    <input type="file" name="imagen" id="#file">
+</body>
+<script src="js/rd.js"></script>
+</html>

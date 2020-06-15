@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jesus1554/Sass-basis@1.1/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Verficación de Cuenta | FotoCrypto</title>
+</head>
+
+<body class="login-body">
+    <a href="/" class="back">
+        <i class="fas fa-arrow-left"></i>
+        <p>Home</p>
+    </a>
+
+    <form action="{{ url_for('signup') }}" method="post" class="login-sty">
+        <h1>Verificación de Cuenta</h1>
+        <p>Enviamos un correo a <b>{{ mail }}</b>, introduce el código que recibiste.</p>
+        <b>No cierres ni recargues esta ventana</b>
+        <input type="number" required name="code" id="code" placeholder="Código de 4 dígitos">
+        <button type="submit" class="btn btn-a">Confirmar</button>
+        <!-- <p>Si no tienes una cuenta <a href="/signup" class="a-linter">crea una</a></p> -->
+    </form>
+</body>
+<script src="js/rd.js"></script>
+</html>
